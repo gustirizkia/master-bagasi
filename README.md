@@ -42,7 +42,7 @@ php artisan passport:install
 
 ### List Endpoint
 
-#### Base URL
+#### Base URL for me
 
 ```
 https://dev-gusti.m-andreansaefudin.com/api/
