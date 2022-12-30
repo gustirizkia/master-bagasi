@@ -28,14 +28,16 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-```
-php artisan passport:install
-```
-
 create database master_bagasi and run the following command
 
 ```
 php artisan migrate --seed
+```
+
+publish laravel passport
+
+```
+php artisan passport:install
 ```
 
 ### List Endpoint

@@ -10,7 +10,16 @@ class Product extends Model
 {
     use HasFactory;
 
-     protected $appends = ['count_rating', 'thumbnail'];
+     protected $appends = ['count_rating', 'thumbnail', 'terjual'];
+
+     public function getTerjualAttribute(){
+        $data = DB::table('detail_transactions')
+            ->where('product_id', $this->id)
+            ->join('transactions', 'detail_transactions.transaction_id', 'transactions.id')
+            ->where('transactions.status', 'done')
+            ->sum('detail_transactions.qty');
+        return $data;
+     }
 
      public function getThumbnailAttribute(){
         $image = DB::table('product_images')->where('product_id', $this->id)->where('is_thumbnail', 1)->orderByDesc('updated_at')->first();
