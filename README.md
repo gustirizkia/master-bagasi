@@ -53,3 +53,7 @@ php artisan migrate --seed
 
 -   **post** `/login`
 -   **post** `/register`
+
+## Link Dokumentasi API
+
+<a href="https://documenter.getpostman.com/view/19492328/2s8Z6yXswV">Link Dokumentasi API POSTMAN</a>
