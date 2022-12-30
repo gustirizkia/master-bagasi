@@ -42,6 +42,12 @@ php artisan passport:install
 
 ### List Endpoint
 
+#### Base URL
+
+```
+https://dev-gusti.m-andreansaefudin.com/api/
+```
+
 #### Product endpoints:
 
 -   **get** `/product/{slug}`
