@@ -51,7 +51,8 @@ https://dev-gusti.m-andreansaefudin.com/api/
 #### Product endpoints:
 
 -   **get** `/product/{slug}`
-    example :
+
+example :
 
 ```
 https://dev-gusti.m-andreansaefudin.com/api/product/voluptas-officia-eligendi-voluptate-deleniti-delectus
