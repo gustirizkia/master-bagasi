@@ -10,7 +10,13 @@ class Product extends Model
 {
     use HasFactory;
 
-     protected $appends = ['count_rating'];
+     protected $appends = ['count_rating', 'thumbnail'];
+
+     public function getThumbnailAttribute(){
+        $image = DB::table('product_images')->where('product_id', $this->id)->where('is_thumbnail', 1)->orderByDesc('updated_at')->first();
+
+        return $image;
+     }
 
     public function getCountRatingAttribute(){
            $rating = DB::table('ratings')->where('product_id', $this->id)->select(DB::raw("ROUND(AVG(count_star),1)as total_rating"))->get();

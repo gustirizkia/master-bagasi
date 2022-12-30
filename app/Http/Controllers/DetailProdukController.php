@@ -35,4 +35,6 @@ class DetailProdukController extends Controller
             'another_product_in_brand' => $anotherProductBrand
         ]);
     }
+
+
 }

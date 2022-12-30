@@ -28,7 +28,7 @@ class ProductSeeder extends Seeder
                     'name_product' => $name,
                     'slug' => $slug,
                     'description' => $faker->sentence($nbWords = 12, $variableNbWords = true),
-                    'price' => $i*3,
+                    'price' => $i*300,
                     'berat' => $i*2,
                     'brand_id' => DB::table('brands')->find($index+1) ? DB::table('brands')->find($index+1)->id : 1,
                     'created_at' => now(),

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransacationsTable extends Migration
+class CreateTransactionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateTransacationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transacations', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id');
             $table->string('no_inv');
-            $table->string('status')->default('pending');
+            $table->string('status');
             $table->string('notes')->nullable();
-            $table->char('total_price', 50);
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreateTransacationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transacations');
+        Schema::dropIfExists('transactions');
     }
 }
