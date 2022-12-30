@@ -10,7 +10,7 @@ class Product extends Model
 {
     use HasFactory;
 
-     protected $appends = ['count_rating', 'thumbnail', 'terjual'];
+     protected $appends = ['count_rating', 'terjual', 'thumbnail'];
 
      public function getTerjualAttribute(){
         $data = DB::table('detail_transactions')
