@@ -11,6 +11,10 @@ git clone https://github.com/gustirizkia/master-bagasi.git
 install dependency
 
 ```
+cd master-bagasi
+```
+
+```
 composer install
 ```
 
